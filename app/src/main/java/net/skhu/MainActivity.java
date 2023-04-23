@@ -1,8 +1,9 @@
 package net.skhu;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.content.Intent;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,5 +11,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void btnListView_clicked(View view){
+        Intent intent = new Intent(this, ListViewActivity.class);
+        startActivity(intent);
+    }
+    public void btnRecyclerView1_clicked(View view){
+        Intent intent = new Intent(this, RecyclerView1Activity.class);
+        startActivity(intent);
+    }
+    public void btnRecyclerView2_clicked(View view){
+        Intent intent = new Intent(this, RecyclerView2Activity.class);
+        startActivity(intent);
     }
 }
